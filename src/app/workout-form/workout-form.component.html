@@ -5,9 +5,14 @@
         <input matInput type="text" name="username" required>
       </mat-form-field>
   
-      <mat-form-field appearance="fill">
+      <mat-form-field>
         <mat-label>Workout Type</mat-label>
-        <input matInput type="text" name="type" required>
+        <mat-select required>
+          <mat-option value="Cycling">Cycling</mat-option>
+          <mat-option value="Running">Running</mat-option>
+          <mat-option value="Swimming">Swimming</mat-option>
+          <mat-option value="Yoga">Yoga</mat-option>
+        </mat-select>
       </mat-form-field>
   
       <mat-form-field appearance="fill">

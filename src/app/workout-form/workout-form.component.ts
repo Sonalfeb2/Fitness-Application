@@ -3,7 +3,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
-
+import {MatSelectModule} from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
 @Component({
   selector: "app-workout-form",
@@ -13,7 +13,8 @@ import { MatCardModule } from '@angular/material/card';
     MatButtonModule,
     MatFormFieldModule,
     FormsModule,
-    MatCardModule
+    MatCardModule,
+    MatSelectModule
   ],
   templateUrl: "./workout-form.component.html",
   styleUrl: "./workout-form.component.css"
