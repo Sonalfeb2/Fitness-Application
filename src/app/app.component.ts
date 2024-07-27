@@ -1,15 +1,12 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-
+import { Component } from "@angular/core";
+import { RouterOutlet } from "@angular/router";
+import { WorkoutFormComponent } from "./workout-form/workout-form.component";
 @Component({
-  
-  selector: 'app-root',
+  selector: "app-root",
   standalone: true,
-  imports: [RouterOutlet, MatSlideToggleModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [RouterOutlet, WorkoutFormComponent],
+  templateUrl: "./app.component.html"
 })
 export class AppComponent {
-  title = 'fyle-assessment';
+  title = "Fyle-Fitness";
 }
