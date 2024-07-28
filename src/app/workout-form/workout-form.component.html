@@ -1,10 +1,18 @@
 <mat-card>
     <form (ngSubmit)="onSubmit()" [formGroup]="workoutForm">
+        
+        <div color="danger" *ngIf="workoutForm.controls['username'].invalid  && (errorForm || workoutForm.controls['username'].touched || workoutForm.controls['username'].dirty)">
+            <span *ngIf="workoutForm.controls['username'].errors?.['required']">Username is Required</span>
+        </div>
         <mat-form-field>
             <mat-label>Username</mat-label>
             <input formControlName="username" matInput type="text" name="username">
         </mat-form-field>
-
+       
+        
+        <div  *ngIf="workoutForm.controls['types'].invalid  &&( errorForm || workoutForm.controls['types'].touched || workoutForm.controls['types'].dirty)">
+            <span color="primary" *ngIf="workoutForm.controls['types'].errors?.['required']">Types is Required</span>
+        </div>
         <mat-form-field>
             <mat-label>Workout Type</mat-label>
             <mat-select formControlName="types">
@@ -14,13 +22,16 @@
                 <mat-option value="Yoga">Yoga</mat-option>
             </mat-select>
         </mat-form-field>
-
+        
+        <div  *ngIf="workoutForm.controls['minutes'].invalid  &&(errorForm || workoutForm.controls['minutes'].touched || workoutForm.controls['minutes'].dirty)">
+            <span color="primary" *ngIf="workoutForm.controls['minutes'].errors?.['required']">Minutes is Required</span>
+        </div>
         <mat-form-field appearance="fill">
             <mat-label>Minutes</mat-label>
             <input matInput type="number" name="minutes" formControlName="minutes">
         </mat-form-field>
 
         <button mat-raised-button color="primary" type="submit">Add Workout</button>
-        <i>{{error ? '*Mandatory to Fill All Values*':''}}</i>
+        <i>{{errorForm ? '*Mandatory to Fill All Values*':''}}</i>
     </form>
 </mat-card>
