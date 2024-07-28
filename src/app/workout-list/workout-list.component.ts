@@ -58,6 +58,6 @@ const initialData = [
   }
 ]
 const localData = localStorage.getItem("workouts")
-console.log(localData)
+
 
 const ELEMENT_DATA: PeriodicElement[] = (localData!==null ?[...initialData, ...JSON.parse(localData)]:initialData)
